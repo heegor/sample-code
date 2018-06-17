@@ -5,7 +5,7 @@ import net.paulzeng.sample.util.Utils;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] testArray = new int[] { 3, 5, 9, 6, 0, 4, 8, 2, 7, 1 };
+        int[] testArray = new int[] {  1, 2, 9, 6, 0, 4, 8, 5, 7, 3  };
 
         System.out.println("Before sort: " + Utils.getArrayItems(testArray));
 
