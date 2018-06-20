@@ -17,7 +17,7 @@ public class BubbleSort {
     private static int[] bubbleSort(int[] unsortedArray) {
         int temp;
         for (int round = 0; round < unsortedArray.length - 1; round ++) {
-            // Should have N rounds
+            // Should have N - 1 rounds
 
             for (int j = 0; j < unsortedArray.length - 1 - round; j ++) {
                 if (unsortedArray[j] > unsortedArray[j + 1]) {

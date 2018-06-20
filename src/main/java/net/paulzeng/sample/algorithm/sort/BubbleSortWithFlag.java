@@ -18,7 +18,7 @@ public class BubbleSortWithFlag {
         int temp;
         boolean swapFlag;
         for (int round = 0; round < unsortedArray.length - 1; round ++) {
-            // Should have at least N rounds
+            // Should have at least N - 1 rounds
 
             swapFlag = false;
             for (int j = 0; j < unsortedArray.length - 1 - round; j ++) {
