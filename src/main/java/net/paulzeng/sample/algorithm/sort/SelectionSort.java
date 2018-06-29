@@ -10,7 +10,7 @@ public class SelectionSort {
 
         selectionSort(testArray);
 
-        System.out.println("After sort " + Utils.getArrayItems(testArray));
+        System.out.println("After sort: " + Utils.getArrayItems(testArray));
     }
 
     private static int[] selectionSort(int[] unsortedArray) {

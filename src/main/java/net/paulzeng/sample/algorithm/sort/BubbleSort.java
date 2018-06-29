@@ -11,7 +11,7 @@ public class BubbleSort {
 
         bubbleSort(testArray);
 
-        System.out.println("After sort " + Utils.getArrayItems(testArray));
+        System.out.println("After sort: " + Utils.getArrayItems(testArray));
     }
 
     private static int[] bubbleSort(int[] unsortedArray) {

@@ -11,7 +11,7 @@ public class BubbleSortWithFlag {
 
         bubbleSortWithFlag(testArray);
 
-        System.out.println("After sort " + Utils.getArrayItems(testArray));
+        System.out.println("After sort: " + Utils.getArrayItems(testArray));
     }
 
     private static int[] bubbleSortWithFlag(int[] unsortedArray) {

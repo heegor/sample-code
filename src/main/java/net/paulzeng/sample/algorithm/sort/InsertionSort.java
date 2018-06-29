@@ -11,29 +11,33 @@ public class InsertionSort {
 
         insertionSort(testArray);
 
-        System.out.println("After sort " + Utils.getArrayItems(testArray));
+        System.out.println("After sort: " + Utils.getArrayItems(testArray));
     }
 
     private static int[] insertionSort(int[] unsortedArray) {
-        int minIndex;
-        for (int round = 1; round < unsortedArray.length; round ++) {
+        int insertIndex;
+        for (int splitter = 1; splitter < unsortedArray.length; splitter ++) {
             // Should have N - 1 rounds
 
-            minIndex = round;
-
-            for (int j = round + 1; j < unsortedArray.length; j ++) {
-                if (unsortedArray[minIndex] > unsortedArray[j]) {
-                    minIndex = j;
+            // Get the insert index
+            insertIndex = splitter;
+            for (int j = splitter -1; j >= 0; j --) {
+                if (unsortedArray[j] > unsortedArray[splitter]) {
+                    insertIndex = j;
+                    continue;
+                } else {
+                    break;
                 }
             }
 
-            if (minIndex != round) {
-                int temp = unsortedArray[minIndex];
-                unsortedArray[minIndex] = unsortedArray[round];
-                unsortedArray[round] = temp;
+            // Move the item to right
+            int temp = unsortedArray[splitter];
+            for (int mov = splitter; mov > insertIndex; mov --) {
+                unsortedArray[mov] = unsortedArray[mov - 1];
             }
+            unsortedArray[insertIndex] = temp;
 
-            System.out.println("After round " + (round + 1)+ ": " + Utils.getArrayItems(unsortedArray));
+            System.out.println("After round " + (splitter)+ ": " + Utils.getArrayItems(unsortedArray));
         }
 
         return unsortedArray;
